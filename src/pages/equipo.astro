@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Miembro from "../components/Miembro.astro";
+---
+
+<BaseLayout title="Equipo" sideBarActiveItemID="equipo">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Equipo de HappyAbue</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    El equipo de HappyAbue se ha encargado de realizar tu experiencia mucho mas facil, conocenos.
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <Miembro
+      title='Silvia Prada'
+      img="/equipo/silvia.jpg"
+      desc='@_silv1uu'
+      target="_self"
+      badge="xd"
+    />   
+    <Miembro
+      title='Zarhay Cepeda'
+      img="/equipo/zarhay.jpg"
+      desc='@zay___c'
+      target="_self"
+      badge="xd"
+    />
+    <Miembro
+      title='Dilam Pena'
+      img="/equipo/notfound.jpg"
+      desc='@dilam.c2'
+      target="_self"
+      badge="xd"
+    />
+
+  </ul>
+</BaseLayout>
