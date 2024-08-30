@@ -15,42 +15,68 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl py-3 font-bold">Aprende a usar la aplicación</div>
     <div class="py-2">
       <text class="text-lg">
-        A continuacion podras obtener mas informacion para usar HappyAbue de la manera mas facil y chevere.
+        A continuación, podrás obtener más información para usar HappyAbue de la manera más fácil y chévere.
       </text>
     </div>
 
-  <div class="mt-5">
-    <div class="text-3xl w-full font-bold mb-2">Que puedo hacer aca</div>
-    <text>Bienvenido, HappyAbue consiste de diferentes funciones faciles de usar. Podras acceder a charlas programadas, obtener informacion sobre la plataforma y realizar preguntas para obtener ayuda</text>
+    <div class="mt-8">
+      <div class="text-3xl w-full font-bold mb-2">Qué puedo hacer acá</div>
+      <text>Bienvenido, HappyAbue consiste en diferentes funciones fáciles de usar. Podrás acceder a charlas programadas, obtener información sobre la plataforma y realizar preguntas para obtener ayuda.</text>
+      <HorizontalCard
+      title="Cómo ingresar a una charla"
+      img="/post_img.webp"
+      desc="Haz clic para conocer."
+      url="#"
+      badge="Nuevo"
+    />
+
+    </div>
+
+
+    <div class="mt-8">
+      <div class="text-3xl w-full font-bold mb-2">Personaliza tu experiencia</div>
+      <text>Aprende cómo personalizar la interfaz de usuario de HappyAbue para que se ajuste a tus necesidades. Cambia los temas, ajusta el tamaño del texto y configura notificaciones según tus preferencias.</text>
+    </div>
+
+    <HorizontalCard
+      title="Personalización de la interfaz"
+      img="/customization_img.webp"
+      desc="Descubre cómo."
+      url="/blog/personalizacion"
+      badge="Nuevo"
+    />
+
+    <div class="mt-5">
+      <div class="text-3xl w-full font-bold mb-2">Explora la biblioteca de charlas</div>
+      <text>Conoce todas las charlas disponibles en la plataforma. Filtra por categorías, guarda tus favoritas y recibe notificaciones cuando se programen nuevas charlas en tus temas de interés.</text>
+    </div>
+
+    <HorizontalCard
+      title="Biblioteca de charlas"
+      img="/library_img.webp"
+      desc="Explora las charlas."
+      url="/charlas"
+      badge="Nuevo"
+    />
+
+    <div>
+      <div class="text-3xl w-full font-bold mb-5 mt-10">Últimas reuniones</div>
+    </div>
+
+    {
+      last_posts.map((post) => (
+        <>
+          <HorizontalCard
+            title={post.data.title}
+            img={post.data.heroImage}
+            desc={post.data.description}
+            url={"/charlas/" + createSlug(post.data.title, post.slug)}
+            target="_self"
+            badge={post.data.badge}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+    }
   </div>
-
-
-
-
-  <HorizontalCard
-    title="Como ingresar a una charla"
-    img="/post_img.webp"
-    desc="Dame click para conocer."
-    url="#"
-    badge="Nuevo"
-  />
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Ultimas reuniones</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/charlas/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
 </BaseLayout>

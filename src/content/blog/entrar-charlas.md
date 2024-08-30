@@ -1,6 +1,6 @@
 ---
-title: "BLog"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+title: "Como entrar a una charla"
+description: "Aprende a acceder a las reuniones de HappyAbue."
 pubDate: "Sep 11 2022"
 heroImage: "/post_img.webp"
 ---

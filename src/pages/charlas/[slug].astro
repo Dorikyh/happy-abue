@@ -1,7 +1,7 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
-import { BlogSchema } from "../../content/config";
-import PostLayout from "../../layouts/PostLayout.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import type { charlaSchema } from "../../content/config";
+import CharlaLayout from "../../layouts/CharlaLayout.astro";
 import createSlug from "../../lib/createSlug"
 
 export async function getStaticPaths() {
@@ -17,18 +17,17 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const post: BlogSchema = entry.data;
+const post: charlaSchema = entry.data;
 const { Content } = await entry.render();
 ---
 
-<PostLayout
+<CharlaLayout
   title={post.title}
   description={post.description}
-  pubDate={post.pubDate}
   heroImage={post.heroImage}
-  updatedDate={post.updatedDate}
   badge={post.badge}
-  tags={post.tags}
+  date={post.date}
+  link={post.link}
 >
   <Content />
-</PostLayout>
+</CharlaLayout>
