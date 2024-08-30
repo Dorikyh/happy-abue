@@ -9,31 +9,23 @@ const posts = (await getCollection("charlas")).sort((a, b) => b.data.pubDate.val
 const last_posts = posts.slice(0, 3);
 ---
 
-<BaseLayout sideBarActiveItemID="home">
+<BaseLayout sideBarActiveItemID="tutorial">
   <div class="pb-12 mt-5">
     <div class="text-5xl font-bold">HappyAbue</div>
-    <div class="text-3xl py-3 font-bold">Comunidad para adultos mayores</div>
+    <div class="text-3xl py-3 font-bold">Aprende a usar la aplicación</div>
     <div class="py-2">
       <text class="text-lg">
-        HappyAbue es un emprendimiento innovador diseñado para conectar a las personas de la tercera edad con jóvenes voluntarios a través de una aplicación móvil. Nuestro objetivo es proporcionar a los adultos mayores oportunidades para aprender nuevos temas, distraerse y sentirse acompañados.
+        A continuacion podras obtener mas informacion para usar HappyAbue de la manera mas facil y chevere.
       </text>
     </div>
-    <div class="mt-8">
-      <a href="/tutorial" target="_blank" class="btn btn-outline">
-        Tutorial
-      </a>
-      <a href="/charlas" target="_blank" class="btn btn-outline ml-2">
-        Charlas
-      </a>
-      <a href="/equipo" target="_blank" class="btn btn-outline ml-2">
-        Equipo
-      </a>
-    </div>
+
+  <div class="mt-5">
+    <div class="text-3xl w-full font-bold mb-2">Que puedo hacer aca</div>
+    <text>Bienvenido, HappyAbue consiste de diferentes funciones faciles de usar. Podras acceder a charlas programadas, obtener informacion sobre la plataforma y realizar preguntas para obtener ayuda</text>
   </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">Como usar HappyAbue</div>
-  </div>
+
+
 
   <HorizontalCard
     title="Como ingresar a una charla"
@@ -42,9 +34,8 @@ const last_posts = posts.slice(0, 3);
     url="#"
     badge="Nuevo"
   />
-
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Ultimas charlas</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Ultimas reuniones</div>
   </div>
 
   {
@@ -54,7 +45,7 @@ const last_posts = posts.slice(0, 3);
           title={post.data.title}
           img={post.data.heroImage}
           desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          url={"/charlas/" + createSlug(post.data.title, post.slug)}
           target="_self"
           badge={post.data.badge}
         />

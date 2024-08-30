@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Miembro from "../components/Miembro.astro";
+---
+
+<BaseLayout title="Redes Sociales" sideBarActiveItemID="redes">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Redes sociales</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Conocenos a travez de nuestras redes sociales
+  </div>
+
+  <ul class="">
+    <Miembro
+      title='Instagram'
+      img="/logo.webp"
+      instagram='happyabue'
+      target="_self"
+      badge=""
+    />   
+
+  </ul>
+</BaseLayout>
