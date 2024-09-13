@@ -2,7 +2,7 @@
 title: "Como usar Word"
 description: "Aprende a usar Microsoft Word: tips y herramientas básicas para sacar el máximo provecho"
 date: "9/15/2024"
-heroImage: "/word-tutorial.png"
+heroImage: "/abuelito-con-celular.png"
 tags: ["tutorial", "Word", "herramientas"]
 link: "https://google.com"
 ---
