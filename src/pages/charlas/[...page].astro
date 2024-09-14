@@ -7,7 +7,7 @@ import createSlug from "../../lib/createSlug"
 type Post = {
   data: {
     title: string;
-    pubDate: Date;
+    date: Date;
     heroImage: string;
     description: string;
     badge?: string;
@@ -18,7 +18,7 @@ type Post = {
 
 export async function getStaticPaths({ paginate }) {
   const posts: Post[] = await getCollection("charlas");
-  posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   return paginate(posts, { pageSize: 10 });
 }
 
