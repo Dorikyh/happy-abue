@@ -1,1 +1,3 @@
-Me pagaron muy poquito por esto, me da igual, lo hice bien.
+la mejor pagina del mundo
+
+se me olvido borrar el mensaje del anterior readme xd
